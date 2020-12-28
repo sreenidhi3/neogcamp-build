@@ -1,0 +1,29 @@
+.block{
+    padding: 2rem;
+    margin: auto;
+    align-self: center;
+    text-align: center;
+    border: 1px solid #888888;
+    max-width: 500px;
+}
+.form{
+    padding: 0rem;
+    padding: 0rem;
+    margin: 0rem;
+}
+.form input{
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #888888;
+    border-radius: 10px;
+    width: inherit;
+}
+button{
+    padding: 0.5rem;
+    margin: 1rem;
+    color: lavenderblush;
+    background-color: rgb(49, 167, 49);
+    border: 1px solid seagreen;
+    width: 10rem;
+    border-radius: 10px;
+}
