@@ -9,26 +9,30 @@ function profitOrLoss() {
     var quantity = Number(quantitySelector.value);
     var sellingPrice = Number(sellingPriceSelector.value);
     var costPrice = Number(costPriceSelector.value);
-    if (costPrice> sellingPrice) {
+    if (costPrice > sellingPrice) {
         var lossPerStock = costPrice - sellingPrice;
         var loss = lossPerStock * quantity;
         outputSelector.innerText = "Loss " + loss;
-        outputSelector.style.color = "Red";
+        outputSelector.style.color = "red";
     } else if (costPrice < sellingPrice) {
         var profitPerStock = sellingPrice - costPrice;
         var profit = profitPerStock * quantity;
         outputSelector.innerText = "Profit " + profit;
-        outputSelector.style.color = "Green";
+        outputSelector.style.color = "seagreen";
     } else {
         outputSelector.innerText = "Neither Profit Nor Loss";
+        outputSelector.style.color = "black";
     }
     
 }
 
 function click() {
-    console.log(costPriceSelector.value, sellingPriceSelector.value, quantitySelector.value);
+    //console.log(costPriceSelector.value, sellingPriceSelector.value, quantitySelector.value);
     profitOrLoss();
-    
+    costPriceSelector.value="";
+    sellingPriceSelector.value="";
+    quantitySelector.value="";
+
 }
 
-btSelector.addEventListener("click",  profitOrLoss);
+btSelector.addEventListener("click",  click);
